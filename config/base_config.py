@@ -10,8 +10,8 @@
 
 
 # 基础配置
-PLATFORM = "xhs"
-KEYWORDS = "编程副业,编程兼职"  # 关键词搜索配置，以英文逗号分隔
+PLATFORM = "dy"
+KEYWORDS = "自助棋牌"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
@@ -46,7 +46,7 @@ HEADLESS = False
 SAVE_LOGIN_STATE = True
 
 # 数据保存类型选项配置,支持三种类型：csv、db、json, 最好保存到DB，有排重的功能。
-SAVE_DATA_OPTION = "json"  # csv or db or json
+SAVE_DATA_OPTION = "db"  # csv or db or json
 
 # 用户浏览器缓存的浏览器文件配置
 USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
@@ -58,16 +58,16 @@ START_PAGE = 1
 CRAWLER_MAX_NOTES_COUNT = 200
 
 # 并发爬虫数量控制
-MAX_CONCURRENCY_NUM = 1
+MAX_CONCURRENCY_NUM = 5
 
 # 是否开启爬图片模式, 默认不开启爬图片
-ENABLE_GET_IMAGES = False
+ENABLE_GET_IMAGES = True
 
 # 是否开启爬评论模式, 默认开启爬评论
 ENABLE_GET_COMMENTS = True
 
 # 爬取一级评论的数量控制(单视频/帖子)
-CRAWLER_MAX_COMMENTS_COUNT_SINGLENOTES = 10
+CRAWLER_MAX_COMMENTS_COUNT_SINGLENOTES = 200
 
 # 是否开启爬二级评论模式, 默认不开启爬二级评论
 # 老版本项目使用了 db, 则需参考 schema/tables.sql line 287 增加表字段
@@ -170,7 +170,7 @@ ZHIHU_SPECIFIED_ID_LIST = [
 
 # 词云相关
 # 是否开启生成评论词云图
-ENABLE_GET_WORDCLOUD = False
+ENABLE_GET_WORDCLOUD = True
 # 自定义词语及其分组
 # 添加规则：xx:yy 其中xx为自定义添加的词组，yy为将xx该词组分到的组名。
 CUSTOM_WORDS = {
